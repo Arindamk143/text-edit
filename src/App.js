@@ -1,16 +1,16 @@
-import React, { } from 'react';
-import About from './Components/About';
+// import React, { } from 'react';
+// import About from './Components/About';
 import { useState } from 'react';
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
 import Textarea from './Components/Textarea';
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light")
   const toggleMode = function () {
@@ -33,20 +33,20 @@ function App() {
   }
   return (
     <>
-    <Router>
-    <Navbar title="Text Editions" mode={mode} toggleMode={toggleMode} />
-    <Alert alert={alert} />
-    <div className="container my-3">
-    <Switch>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/">
-            <Textarea title="Enter Text Area" mode={mode} />
-          </Route>
-    </Switch>
-    </div>
-    </Router>
+      {/* <Router> */}
+      <Navbar title="Text Editions" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        {/* <Switch> */}
+        {/* <Route exact path="/about"> */}
+        {/* <About /> */}
+        {/* </Route> */}
+        {/* <Route exact path="/"> */}
+        <Textarea title="Enter Text Area" mode={mode} />
+        {/* </Route> */}
+        {/* </Switch> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
